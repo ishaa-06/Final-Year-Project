@@ -2,7 +2,7 @@ import React from "react";
 import OddManOutGame from "./components/OddManOutGame/OddManOutGame";
 import GuessTheShape from "./components/GuessTheShape/GuessTheShape";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import "./App.css";
 function App() {
   return (
     //< OddManOutGame ></OddManOutGame >
@@ -12,8 +12,13 @@ function App() {
         <Route exact path="/GuessTheShape" element={<GuessTheShape />} />
       </Routes>
 
-      <Link to="/OddManOutGame"> odds man out</Link>
-      <Link to="/GuessTheShape"> guess the shape </Link>
+      <Link className="navilinks" to="/OddManOutGame">
+        odds man out
+      </Link>
+      <Link className="navilinks" to="/GuessTheShape">
+        {" "}
+        guess the shape{" "}
+      </Link>
     </div>
   );
 }
